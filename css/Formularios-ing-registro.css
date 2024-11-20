@@ -1,0 +1,237 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b2b2b, #3f3f3f);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Formulario de Ingreso - No modificar */
+.form-container {
+  background: #292929;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #404040;
+  border: none;
+  color: #f0f0f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+input::placeholder,
+select {
+  color: #b0b0b0;
+}
+
+input:focus,
+select:focus {
+  background-color: #4c4c4c;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #e67e22;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+}
+
+#recuperarPassword {
+  margin-top: 15px;
+  background-color: transparent;
+  color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+#recuperarPassword:hover {
+  color: #e67e22;
+}
+
+/* Estilos para el formulario de registro con animaciones */
+#form-registro {
+  background: #292929;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  animation: slideUp 0.6s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 25px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#form-registro label {
+  text-align: left;
+  color: #b3b3b3;
+  font-size: 0.85rem;
+  opacity: 0;
+  animation: fadeInLabel 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInLabel {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#form-registro input,
+#form-registro select {
+  width: 100%;
+  padding: 10px;
+  background-color: #404040;
+  border: none;
+  color: #f0f0f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: fadeInInput 1s ease-in-out forwards;
+}
+
+@keyframes fadeInInput {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#form-registro label:nth-child(1),
+#form-registro label:nth-child(2) {
+  grid-column: span 1;
+}
+
+#form-registro label:nth-child(3),
+#form-registro label:nth-child(4),
+#form-registro label:nth-child(5),
+#form-registro label:nth-child(6),
+#form-registro label:nth-child(7),
+#form-registro label:nth-child(8),
+#form-registro label:nth-child(9) {
+  grid-column: span 2;
+}
+
+#form-registro button {
+  grid-column: span 2;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: fadeInButton 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#form-registro button:hover {
+  background-color: #27ae60;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  #form-registro {
+    grid-template-columns: 1fr;
+  }
+
+  #form-registro button {
+    grid-column: span 1;
+  }
+}

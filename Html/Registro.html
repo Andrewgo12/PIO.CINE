@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/Formularios-ing-registro.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form id="form-registro" onsubmit="registrarUsuario(); return false;">
+    <label>Nombres: <input type="text" id="nombres" required></label>
+    <label>Apellidos: <input type="text" id="apellidos" required></label>
+    <label>Usuario: <input type="text" id="usuario" required></label>
+    <label>Correo electrónico: <input type="email" id="correo" required></label>
+    <label>Teléfono: <input type="tel" id="telefono" required></label>
+    <label>Contraseña: <input type="password" id="contrasena" required></label>
+    <label>Edad: <input type="number" id="edad" required></label>
+    <label>Sexo:
+      <select id="sexo" required>
+        <option value="">Selecciona</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+      </select>
+    </label>
+    <label>Correo de recuperación: <input type="email" id="correoRecuperacion" required></label>
+    <button type="submit">Registrarse</button>
+  </form>
+  <js href="../js/Registro.js"></js>
+</body>
+
+</html>
